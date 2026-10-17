@@ -22,7 +22,7 @@ jobs:
       - name: Prepare public files only
         run: |
           mkdir _site
-          cp index.html privacy.html styles.css site.js robots.txt sitemap.xml _site/
+          cp index.html privacy.html security.html styles.css site.js robots.txt sitemap.xml _site/
           cp -r assets _site/assets
           if [ -f CNAME ]; then cp CNAME _site/; fi
           touch _site/.nojekyll
