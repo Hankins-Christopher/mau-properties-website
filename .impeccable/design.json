@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T00:00:00Z",
+  "title": "Design System: MAU Properties LLC",
+  "extensions": {
+    "colorMeta": {
+      "green": { "role": "primary", "displayName": "Deep Green" },
+      "lime": { "role": "secondary", "displayName": "Pale Lime" },
+      "paper": { "role": "neutral", "displayName": "Soft Paper" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero statement; responsive overrides are documented in DESIGN.md." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings." },
+      "title": { "displayName": "Title", "purpose": "Venture names." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "button-hover", "value": "background .2s", "purpose": "Primary action hover." },
+      { "name": "arrow-hover", "value": "transform .3s cubic-bezier(.16,1,.3,1)", "purpose": "Branch and project link arrow movement." },
+      { "name": "reduced-motion", "value": "transition: none !important; animation: none !important; scroll-behavior: auto", "purpose": "Applied under prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "tablet-max", "value": "1100px" },
+      { "name": "mobile-max", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Lime anchor action with a directional arrow.",
+      "html": "<a class=\"ds-button\" href=\"#ventures\">Explore our ventures <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;gap:42px;background:var(--lime,#dae6b1);color:var(--green,#18382b);font:750 12px/1.75 var(--sans,Manrope,Arial,sans-serif);text-decoration:none;padding:15px 21px;border-radius:3px;transition:background .2s}.ds-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.ds-button:hover{background:#f0f5d8}.ds-button:focus-visible{outline:3px solid #779438;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "overview": "The implemented identity is editorial and grounded: large serif statements, compact sans-serif details, generous space, and ruled rows. Deep green establishes the company presence; pale surfaces organize supporting content. Code-led implementation; no separate visual comp.",
+    "keyCharacteristics": ["Typographic hierarchy without photography", "Paired columns that stack on narrow screens", "Restrained lime emphasis and directional arrows"],
+    "rules": [
+      { "name": "The Surface Rule", "body": "Use lime focus outlines on green surfaces and the dedicated focus color on light backgrounds.", "section": "colors" }
+    ],
+    "dos": ["Do preserve visible focus and reduced-motion behavior.", "Do use typography, spacing, and rules as visual structure."],
+    "donts": ["Don't introduce elevated dashboard cards.", "Don't invent listings, availability, or contact forms for the portfolio."]
+  }
+}
